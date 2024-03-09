@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" styleClass="bg_white" stylesheets="@../../dashbard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hms.hosteler.ProfileController">
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="560.0" prefWidth="865.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER">
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
+               <content>
+                  <Pane prefHeight="725.0" prefWidth="864.0" styleClass="bg_white" stylesheets="@../../dashbard.css">
+                     <children>
+                        <HBox id="heading" alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="864.0" styleClass="bg_modules_heading" stylesheets="@../../dashbard.css">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="65.0" prefWidth="209.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Profile" textAlignment="CENTER" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" layoutY="75.0" prefHeight="700.0" prefWidth="864.0">
+                           <children>
+                              <Pane prefHeight="659.0" prefWidth="750.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="573.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/profile.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="25.0" layoutY="25.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Name: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_name" layoutX="160.0" layoutY="25.0" prefHeight="30.0" prefWidth="200.0" text="Raman Chaudhary" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="75.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="User ID: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_uid" layoutX="160.0" layoutY="75.0" prefHeight="30.0" prefWidth="169.0" text="_rmnrjchy" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="150.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Age:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_age" layoutX="160.0" layoutY="150.0" prefHeight="30.0" prefWidth="200.0" text="21" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="275.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Country:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_country" layoutX="160.0" layoutY="275.0" prefHeight="30.0" prefWidth="200.0" text="Nepal" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="327.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Permanent Address:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_pp" layoutX="160.0" layoutY="327.0" prefHeight="30.0" prefWidth="200.0" text="province" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="50.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Post: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_post" layoutX="160.0" layoutY="50.0" prefHeight="30.0" prefWidth="200.0" text="Warden" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="100.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Hosteler ID: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_hid" layoutX="160.0" layoutY="100.0" prefHeight="30.0" prefWidth="200.0" text="R00123" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="125.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Date of Birth: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_dob" layoutX="160.0" layoutY="125.0" prefHeight="30.0" prefWidth="200.0" text="2003-02-28" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="200.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Phone No.: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_phone1" layoutX="160.0" layoutY="200.0" prefHeight="30.0" prefWidth="200.0" text="+977 9824644XXX" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="270.0" layoutY="125.0" prefHeight="30.0" prefWidth="40.0" text="BS" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="197.0" layoutY="149.0" prefHeight="30.0" prefWidth="40.0" text="years" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="225.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Phone No.: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_phone2" layoutX="160.0" layoutY="225.0" prefHeight="30.0" prefWidth="200.0" text="+977 9865830XXX" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_pm" layoutX="160.0" layoutY="353.0" prefHeight="30.0" prefWidth="200.0" text="municipal" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_pw" layoutX="375.0" layoutY="353.0" prefHeight="30.0" prefWidth="103.0" text="ward no" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_pd" layoutX="375.0" layoutY="327.0" prefHeight="30.0" prefWidth="200.0" text="district" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_pt" layoutX="485.0" layoutY="353.0" prefHeight="30.0" prefWidth="200.0" text="tole" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="378.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Temporary Address:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_tp" layoutX="160.0" layoutY="378.0" prefHeight="30.0" prefWidth="200.0" text="province" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_td" layoutX="375.0" layoutY="378.0" prefHeight="30.0" prefWidth="200.0" text="district" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_tm" layoutX="160.0" layoutY="408.0" prefHeight="30.0" prefWidth="200.0" text="municipal" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_tw" layoutX="375.0" layoutY="408.0" prefHeight="30.0" prefWidth="103.0" text="ward no" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_tt" layoutX="485.0" layoutY="408.0" prefHeight="30.0" prefWidth="200.0" text="tole" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="428.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Join Date:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_join" layoutX="160.0" layoutY="428.0" prefHeight="30.0" prefWidth="200.0" text="2019-06-07" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="453.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Leave Date:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_leave" layoutX="160.0" layoutY="453.0" prefHeight="30.0" prefWidth="200.0" text="yyyy-mm-dd" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="260.0" layoutY="453.0" prefHeight="30.0" prefWidth="40.0" text="AD" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="260.0" layoutY="428.0" prefHeight="30.0" prefWidth="40.0" text="AD" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="175.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Sex:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_sex" layoutX="160.0" layoutY="175.0" prefHeight="30.0" prefWidth="200.0" text="Male" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="250.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Email:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_email" layoutX="160.0" layoutY="250.0" prefHeight="30.0" prefWidth="200.0" text="rmnrjbnsh@gmail.com" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="300.0" prefHeight="30.0" prefWidth="130.0" stylesheets="@../../dashbard.css" text="Citizenship No.:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Label_citizenship" layoutX="160.0" layoutY="300.0" prefHeight="30.0" prefWidth="200.0" text="xxxx-xx-xx-xxxx" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

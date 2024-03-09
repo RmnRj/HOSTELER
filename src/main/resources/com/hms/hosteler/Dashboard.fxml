@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorDashboard" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" styleClass="bg_white" stylesheets="@design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hms.hosteler.DashboardController">
+   <children>
+      <BorderPane fx:id="innerBoderpane" layoutX="118.0" layoutY="74.0" styleClass="bg_white" stylesheets="@dashbard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="51.0" style="-fx-border-color: gray;" styleClass="bg_orange" stylesheets="@dashbard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="40.0" prefWidth="312.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/z2_MainIcon.png" />
+                           </image>
+                        </ImageView>
+                        <Label contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="100.0" prefHeight="15.0" prefWidth="134.0" stylesheets="@dashbard.css" text="HOSTELER" textFill="#0a471d">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="20.0" text="&quot;a hostel management system&quot;" textFill="#0a471d">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <ScrollPane accessibleRole="PARENT" blendMode="DARKEN" depthTest="DISABLE" hbarPolicy="NEVER" style="-fx-background-color: #D4A376;" stylesheets="@dashbard.css" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+               <content>
+                  <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-border-color: gray;" stylesheets="@dashbard.css">
+                     <children>
+                        <Button id="home" cache="true" defaultButton="true" onAction="#toHome" prefHeight="30.0" prefWidth="185.0" stylesheets="@dashbard.css" text="Home">
+                           <styleClass>
+                              <String fx:value="modules" />
+                              <String fx:value="modules_Color" />
+                           </styleClass></Button>
+                        <Button id="profile" cache="true" onAction="#toProfile" prefHeight="30.0" prefWidth="185.0" stylesheets="@dashbard.css" text="Profile">
+                           <styleClass>
+                              <String fx:value="modules" />
+                              <String fx:value="modules_Color" />
+                           </styleClass></Button>
+                        <Pane id="student" prefHeight="30.0" prefWidth="185.0" styleClass="modules_Color" stylesheets="@dashbard.css">
+                           <children>
+                              <MenuButton id="Student" alignment="CENTER" cache="true" layoutX="151.0" popupSide="RIGHT" stylesheets="@dashbard.css" textAlignment="JUSTIFY">
+                                 <items>
+                                    <MenuItem id="Student Reg" onAction="#studentReg" text="Student Registration" />
+                                    <MenuItem id="Student" onAction="#studentDetails" text="Student Details" />
+                                    <MenuItem id="Student" onAction="#DeleteStudent" text="Delete Student" />
+                                 </items>
+                                 <effect>
+                                    <ColorAdjust />
+                                 </effect>
+                                 <styleClass>
+                                    <String fx:value="modules" />
+                                    <String fx:value="bg_orange" />
+                                 </styleClass>
+                              </MenuButton>
+                              <Button id="Student" cache="true" onAction="#toStudent" prefHeight="30.0" prefWidth="159.0" stylesheets="@dashbard.css" text="        Student">
+                                 <styleClass>
+                                    <String fx:value="modules" />
+                                    <String fx:value="modules_Color" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane id="emp" prefHeight="30.0" prefWidth="185.0" styleClass="modules_Color" stylesheets="@dashbard.css">
+                           <children>
+                              <MenuButton id="Employee" alignment="CENTER" cache="true" layoutX="151.0" popupSide="RIGHT" stylesheets="@dashbard.css" textAlignment="JUSTIFY">
+                                <items>
+                                  <MenuItem id="Add Emp" onAction="#addEmp" text="Add Employee" />
+                                  <MenuItem id="Emp" onAction="#EmpDetails" text="Employee Details" />
+                                    <MenuItem id="Emp" onAction="#DeleteEmp" text="Delete Employee" />
+                                </items>
+                                 <effect>
+                                    <ColorAdjust />
+                                 </effect>
+                                 <styleClass>
+                                    <String fx:value="modules" />
+                                    <String fx:value="bg_orange" />
+                                 </styleClass>
+                              </MenuButton>
+                              <Button id="Emp" cache="true" onAction="#toEmployee" prefHeight="30.0" prefWidth="159.0" stylesheets="@dashbard.css" text="        Employee">
+                                 <styleClass>
+                                    <String fx:value="modules" />
+                                    <String fx:value="modules_Color" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane id="room" prefHeight="30.0" prefWidth="185.0" styleClass="modules_Color" stylesheets="@dashbard.css">
+                           <children>
+                              <MenuButton id="Room" alignment="CENTER" cache="true" layoutX="151.0" popupSide="RIGHT" stylesheets="@dashbard.css" textAlignment="JUSTIFY">
+                                 <items>
+                                    <MenuItem id="Allocate" mnemonicParsing="false" onAction="#AllocateRoom" text="Allocate Room" />
+                                    <MenuItem id="Room Detail" mnemonicParsing="false" onAction="#RoomDetail" text="Room Detail" />
+                                    <MenuItem id="Vacant " mnemonicParsing="false" onAction="#allRoomsDetails" text="All Rooms Detail" />
+                                 </items>
+                                 <effect>
+                                    <ColorAdjust />
+                                 </effect>
+                                 <styleClass>
+                                    <String fx:value="modules" />
+                                    <String fx:value="bg_orange" />
+                                 </styleClass>
+                              </MenuButton>
+                              <Button id="Emp" cache="true" onAction="#toRoom" prefHeight="30.0" prefWidth="159.0" stylesheets="@dashbard.css" text="      Room">
+                                 <styleClass>
+                                    <String fx:value="modules" />
+                                    <String fx:value="modules_Color" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Button id="Billing" cache="true" onAction="#toBilling" prefHeight="30.0" prefWidth="185.0" stylesheets="@dashbard.css" text="Billing">
+                           <styleClass>
+                              <String fx:value="modules" />
+                              <String fx:value="modules_Color" />
+                           </styleClass>
+                        </Button>
+                        <Pane id="visitor" prefHeight="30.0" prefWidth="185.0" styleClass="modules_Color" stylesheets="@dashbard.css">
+                           <children>
+                              <MenuButton id="Visitor" alignment="CENTER" cache="true" layoutX="151.0" popupSide="RIGHT" stylesheets="@dashbard.css" textAlignment="JUSTIFY">
+                                 <items>
+                                    <MenuItem id="Form" mnemonicParsing="false" onAction="#VisitorForm" text="Visitor Form" />
+                                    <MenuItem id="Details" mnemonicParsing="false" onAction="#VisitorDetails" text="Visitor Details" />
+                                 </items>
+                                 <effect>
+                                    <ColorAdjust />
+                                 </effect>
+                                 <styleClass>
+                                    <String fx:value="modules" />
+                                    <String fx:value="bg_orange" />
+                                 </styleClass>
+                              </MenuButton>
+                              <Button id="Emp" cache="true" onAction="#toVisitor" prefHeight="30.0" prefWidth="159.0" stylesheets="@dashbard.css" text="      Visitor">
+                                 <styleClass>
+                                    <String fx:value="modules" />
+                                    <String fx:value="modules_Color" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Button id="Setting" cache="true" onAction="#toSetting" prefHeight="30.0" prefWidth="185.0" stylesheets="@dashbard.css" text="Setting">
+                           <styleClass>
+                              <String fx:value="modules" />
+                              <String fx:value="modules_Color" />
+                           </styleClass></Button>
+                        <Button id="About" cache="true" onAction="#toAbout" prefHeight="30.0" prefWidth="185.0" stylesheets="@dashbard.css" text="About">
+                           <styleClass>
+                              <String fx:value="modules" />
+                              <String fx:value="modules_Color" />
+                           </styleClass></Button>
+                        <Button id="Logout" fx:id="btn_Logout" cache="true" onAction="#actionLogout" prefHeight="30.0" prefWidth="185.0" stylesheets="@dashbard.css" text="Logout">
+                           <styleClass>
+                              <String fx:value="modules" />
+                              <String fx:value="modules_Color" />
+                           </styleClass></Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="5.0" right="10.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

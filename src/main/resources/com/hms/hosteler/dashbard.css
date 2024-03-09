@@ -1,0 +1,57 @@
+.modules{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    /* -fx-pref-width: 185px;
+    -fx-pref-height: 30px;*/
+}
+
+.modules:pressed {
+     -fx-background-color:  linear-gradient(to right ,#f0ddcc, #d6b08d);
+}
+.modules_Color{
+-fx-background-color:  linear-gradient(to right ,#d6b08d, #D4A376);;
+}
+
+.bg_white{
+ -fx-background-color: #C7D1D2;
+ /*-fx-background-color: #b0e0e6;*/
+}
+.bg_orange{
+    -fx-background-color:  #D4A376;
+}
+.text_green{
+    -fx-text-fill: #0A471D;
+}
+
+.text_white{
+    -fx-text-fill: #C7D1D2;
+}
+
+.dashboard_parts{
+    -fx-background-color: #a7b5b4;
+    -fx-background-radius: 20px;
+}
+.bg_modules_heading{
+    -fx-background-color: #a9c7c9;
+    -fx-background-radius: 10px;
+}
+
+.table{
+    -fx-background-color: #C7D1D2;
+    -fx-border: solid black;
+}
+
+.SearchBox{
+    -fx-background-radius: 15px;
+}
+.SearchBtn{
+     -fx-background-radius: 5px;
+      -fx-background-color:  linear-gradient(to right ,#d6c0ab,#D4A376);
+ }
+
+ .setting_btn{
+     -fx-background-color:  #D4A376;
+     -fx-font-weight: bold;
+     -fx-text-fill: #0A471D;
+      -fx-background-color:  linear-gradient(to right ,#d6c0ab,#D4A376);
+ }

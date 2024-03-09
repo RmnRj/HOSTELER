@@ -1,0 +1,34 @@
+
+
+/*This stylesheet is for only login, signup and forgot password process*/
+
+.bg_white{
+ -fx-background-color: #C7D1D2;
+}
+
+.bg_orange{
+    -fx-background-color:  #D4A376;
+}
+
+.bg_green{
+    -fx-background-color:  linear-gradient(to right ,#226336,#0A471D);
+}
+
+/* For main Button radius*/
+.btn_fun{
+    -fx-pref-height: 25px;
+    -fx-pref-width: 95px;
+    -fx-background-color:  linear-gradient(to right ,#d6c0ab,#D4A376);
+    -fx-background-radius: 10px;
+    -fx-text-fill: #0A471D;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.field_radius{
+    -fx-background-radius: 5px;
+}
+
+.btn_radius{
+    -fx-background-radius: 10px;
+}

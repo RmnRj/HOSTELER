@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorS" minHeight="400.0" minWidth="600.0" styleClass="bg_white" stylesheets="@design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hms.hosteler.SignupController">
+   <children>
+      <BorderPane layoutX="217.0" layoutY="88.0" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane>
+               <children>
+                  <HBox alignment="TOP_CENTER">
+                     <children>
+                        <Pane>
+                           <children>
+                              <Pane id="1" fx:id="PaneDefaultPass" prefHeight="400.0" prefWidth="350.0" scaleShape="false" styleClass="bg_white" stylesheets="@design.css">
+                                 <children>
+                                    <Button fx:id="btn_signup1" layoutX="112.0" layoutY="290.0" mnemonicParsing="true" onAction="#AfterDefaultPassFun" prefHeight="39.0" prefWidth="126.0" stylesheets="@design.css" text="Next" textFill="#c7d1d2">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="bg_green" />
+                                          <String fx:value="btn_radius" />
+                                       </styleClass>
+                                    </Button>
+                                    <TextField fx:id="HostelerID_Signup" layoutX="50.0" layoutY="151.0" onKeyPressed="#EnterHandle1st" prefHeight="30.0" prefWidth="250.0" promptText="Hostel_ID" styleClass="field_radius" stylesheets="@design.css" />
+                                    <TextField id="pass" fx:id="DefaultPassword_TextField" layoutX="50.0" layoutY="215.0" onKeyPressed="#EnterHandle1st" prefHeight="30.0" prefWidth="250.0" promptText="Default Password" styleClass="field_radius" stylesheets="@design.css" visible="false" />
+                                    <PasswordField fx:id="DefaultPassword_PasswordField" layoutX="50.0" layoutY="215.0" onKeyPressed="#EnterHandle1st" prefHeight="30.0" prefWidth="250.0" promptText="Default Password" styleClass="field_radius" stylesheets="@design.css" />
+                                    <Label layoutX="89.0" layoutY="347.0" text="Already registered ?" />
+                                    <Button layoutX="213.0" layoutY="343.0" mnemonicParsing="false" onAction="#switch2login" styleClass="bg_white" stylesheets="@design.css" text="Login" textFill="#626e8d">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="70.0" layoutY="30.0" prefHeight="43.0" prefWidth="209.0" styleClass="field_radius" stylesheets="@design.css" text="Create a account" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fx:id="EyeIcon" fitHeight="21.0" fitWidth="24.0" layoutX="269.0" layoutY="220.0" onMouseClicked="#DefPassword" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/hide.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="50.0" layoutY="245.0" text="Password is not matched." textFill="#ce3333" visible="false" />
+                                    <Label layoutX="35.0" layoutY="80.0" text="Default Password" />
+                                    <Label disable="true" layoutX="35.0" layoutY="95.0" prefHeight="17.0" prefWidth="203.0" text="Create UserID and New Password" />
+                                 </children>
+                              </Pane>
+                              <Pane id="2" fx:id="PaneCreateNewPass" prefHeight="400.0" prefWidth="350.0" scaleShape="false" styleClass="bg_white" stylesheets="@design.css" visible="false">
+                                 <children>
+                                    <Button fx:id="btn_signup" layoutX="112.0" layoutY="290.0" mnemonicParsing="true" onAction="#AfterNewPassFun" prefHeight="39.0" prefWidth="126.0" stylesheets="@design.css" text="Signup" textFill="#c7d1d2">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="bg_green" />
+                                          <String fx:value="btn_radius" />
+                                       </styleClass>
+                                    </Button>
+                                    <TextField id="New" fx:id="NewUserID" layoutX="50.0" layoutY="126.0" onKeyPressed="#EnterHandle2nd" prefHeight="30.0" prefWidth="250.0" promptText="Create UserID" styleClass="field_radius" stylesheets="@design.css" />
+                                    <TextField fx:id="NewPassword_TextField" layoutX="50.0" layoutY="179.0" onKeyPressed="#EnterHandle2nd" prefHeight="30.0" prefWidth="250.0" promptText="New Password" styleClass="field_radius" stylesheets="@design.css" visible="false" />
+                                    <PasswordField fx:id="NewPassword_PasswordField" layoutX="50.0" layoutY="179.0" onKeyPressed="#EnterHandle2nd" prefHeight="30.0" prefWidth="250.0" promptText="New Password" styleClass="field_radius" stylesheets="@design.css" />
+                                    <ImageView fx:id="EyeIcon1" fitHeight="21.0" fitWidth="24.0" layoutX="269.0" layoutY="184.0" onMouseClicked="#NewPassword" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/hide.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="NewPassConfirm_TextField" layoutX="50.0" layoutY="224.0" onKeyPressed="#EnterHandle2nd" prefHeight="30.0" prefWidth="250.0" promptText="Retype New Password" styleClass="field_radius" stylesheets="@design.css" visible="false" />
+                                    <PasswordField fx:id="NewPassConfirm_PasswordField" layoutX="50.0" layoutY="224.0" onKeyPressed="#EnterHandle2nd" prefHeight="30.0" prefWidth="250.0" promptText="Retype New Password" styleClass="field_radius" stylesheets="@design.css" />
+                                    <Label layoutX="89.0" layoutY="347.0" text="Already registered ?" />
+                                    <Button layoutX="213.0" layoutY="343.0" mnemonicParsing="false" onAction="#switch2login" styleClass="bg_white" stylesheets="@design.css" text="Login" textFill="#626e8d">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="70.0" layoutY="30.0" prefHeight="43.0" prefWidth="209.0" styleClass="field_radius" stylesheets="@design.css" text="Create a account" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fx:id="EyeIcon2" fitHeight="21.0" fitWidth="24.0" layoutX="269.0" layoutY="229.0" onMouseClicked="#NewConfirmPassword" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/hide.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label disable="true" layoutX="35.0" layoutY="80.0" text="Default Password" />
+                                    <Label layoutX="50.0" layoutY="245.0" text="Password is not matched." textFill="#ce3333" visible="false" />
+                                    <Label layoutX="35.0" layoutY="95.0" prefHeight="17.0" prefWidth="196.0" text="Create UserID and New Password" />
+                                    <Label fx:id="label_message" layoutX="66.0" layoutY="262.0" prefHeight="17.0" prefWidth="218.0" textFill="#ce3333" />
+                                    <Label fx:id="label_message1" layoutX="61.0" layoutY="156.0" prefHeight="17.0" prefWidth="218.0" textFill="#ce3333" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </center>
+         <left>
+            <HBox alignment="TOP_CENTER" styleClass="bg_orange" stylesheets="@design.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefWidth="250.0" styleClass="bg_orange" stylesheets="@design.css">
+                     <children>
+                        <Label alignment="CENTER" layoutX="70.0" layoutY="209.0" text="HOSTELER" textFill="#0a471d">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="239.0" text="&quot;a hostel management system&quot;" textFill="#0a471d">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="89.0" fitWidth="87.0" layoutX="75.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/z2_MainIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane styleClass="bg_white" stylesheets="@../../dashbard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hms.hosteler.Setting">
+   <children>
+      <HBox alignment="TOP_CENTER" prefWidth="864.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" pannable="true" vbarPolicy="NEVER">
+               <content>
+                  <Pane styleClass="bg_white" stylesheets="@../../dashbard.css">
+                     <children>
+                        <HBox alignment="TOP_CENTER">
+                           <children>
+                              <Pane minHeight="-Infinity" minWidth="-Infinity" styleClass="bg_white" stylesheets="@../../dashbard.css">
+                                 <children>
+                                    <HBox id="heading" alignment="TOP_CENTER" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="864.0" styleClass="bg_modules_heading" stylesheets="@../../design.css">
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="74.0" prefWidth="209.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Setting" textAlignment="CENTER" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox id="form" alignment="TOP_CENTER" layoutX="263.0" layoutY="75.0" prefHeight="625.0" prefWidth="601.0" styleClass="bg_white" stylesheets="@../../dashbard.css">
+                                       <children>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="900.0" vbarPolicy="NEVER">
+                                             <content>
+                                                <Pane prefHeight="800.0" prefWidth="540.0" styleClass="bg_white" stylesheets="@../../dashbard.css">
+                                                   <children>
+                                                      <Pane id="CreateUser" fx:id="CreateUser" layoutX="110.0" layoutY="70.0" prefHeight="450.0" prefWidth="370.0" style="-fx-background-color: #a7b5b4; -fx-background-radius: 10;" visible="false">
+                                                         <children>
+                                                            <ButtonBar layoutY="350.0" prefHeight="65.0" prefWidth="370.0">
+                                                               <buttons>
+                                                                  <Button mnemonicParsing="false" onAction="#cancelPane" styleClass="btn_fun" stylesheets="@../../design.css" text="Cancel" />
+                                                                  <Button mnemonicParsing="false" onAction="#CreateUser_Fun2" prefHeight="25.0" prefWidth="180.0" styleClass="btn_fun" stylesheets="@../../design.css" text="Create" />
+                                                               </buttons>
+                                                            </ButtonBar>
+                                                            <Label layoutX="69.0" layoutY="186.0" prefHeight="44.0" prefWidth="111.0" text="Default Password:" />
+                                                            <TextField fx:id="createUser_ID" layoutX="69.0" layoutY="109.0" onKeyReleased="#CreateUser_Fun1" prefHeight="30.0" prefWidth="200.0" promptText="HostelerID" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                            <TextField fx:id="createUser_DPassword" layoutX="69.0" layoutY="223.0" prefHeight="30.0" prefWidth="200.0" promptText="Default password" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                            <Label alignment="CENTER" layoutX="85.0" layoutY="20.0" prefHeight="30.0" prefWidth="200.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Create New User" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="label_InvalidHostelerID" layoutX="70.0" layoutY="139.0" prefHeight="17.0" prefWidth="279.0" textFill="#ce3333" />
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane id="DeleteUser" fx:id="DeleteUser" layoutX="110.0" layoutY="70.0" prefHeight="450.0" prefWidth="370.0" style="-fx-background-color: #a7b5b4; -fx-background-radius: 10;" visible="false">
+                                                         <children>
+                                                            <ButtonBar layoutY="350.0" prefHeight="65.0" prefWidth="370.0">
+                                                               <buttons>
+                                                                  <Button mnemonicParsing="false" onAction="#cancelPane" styleClass="btn_fun" stylesheets="@../../design.css" text="Cancel" />
+                                                                  <Button mnemonicParsing="false" onAction="#DeleteUserFun" prefHeight="25.0" prefWidth="180.0" styleClass="btn_fun" stylesheets="@../../design.css" text="Delete" />
+                                                               </buttons>
+                                                            </ButtonBar>
+                                                            <TextField fx:id="DU_HostelerId" layoutX="69.0" layoutY="97.0" onKeyReleased="#UserChecker_DeleteUSer" prefHeight="30.0" prefWidth="200.0" promptText="HostelerID" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                            <Label layoutX="69.0" layoutY="136.0" prefHeight="44.0" prefWidth="111.0" text="Reason to remove:" />
+                                                            <Label alignment="CENTER" layoutX="85.0" layoutY="20.0" prefHeight="30.0" prefWidth="200.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Delete User" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="69.0" layoutY="62.0" prefHeight="44.0" prefWidth="111.0" text="HostelerID:" />
+                                                            <TextArea fx:id="DU_deleteReason" layoutX="69.0" layoutY="188.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="275.0" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                            <Label layoutX="71.0" layoutY="171.0" prefHeight="17.0" prefWidth="231.0" text="Describe in brief about 100 characters." />
+                                                            <Label fx:id="DE_label1" layoutX="269.0" layoutY="102.0" prefHeight="21.0" prefWidth="94.0" />
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane id="ChangePh" fx:id="ChangePh" layoutX="110.0" layoutY="70.0" prefHeight="450.0" prefWidth="370.0" style="-fx-background-color: #a7b5b4; -fx-background-radius: 10;" visible="false">
+                                                         <children>
+                                                            <Label alignment="CENTER" layoutX="85.0" layoutY="20.0" prefHeight="30.0" prefWidth="200.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Change Phone Number:" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ButtonBar layoutY="350.0" prefHeight="35.0" prefWidth="370.0">
+                                                               <buttons>
+                                                                  <Button mnemonicParsing="false" onAction="#cancelPane" styleClass="btn_fun" stylesheets="@../../design.css" text="Cancel" />
+                                                                  <Button mnemonicParsing="false" onAction="#setChangePh" prefHeight="25.0" styleClass="btn_fun" stylesheets="@../../design.css" text="Change" />
+                                                               </buttons>
+                                                            </ButtonBar>
+                                                            <TextField fx:id="CPN_NewPh" layoutX="135.0" layoutY="189.0" prefHeight="30.0" prefWidth="150.0" promptText="Number" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                            <Label layoutX="85.0" layoutY="161.0" prefHeight="30.0" prefWidth="174.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Enter New Phone No:" />
+                                                            <Label layoutX="85.0" layoutY="81.0" prefHeight="30.0" prefWidth="174.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Choose which one to change." />
+                                                            <Label layoutX="85.0" layoutY="235.0" prefHeight="30.0" prefWidth="174.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Password:" />
+                                                            <TextField disable="true" layoutX="85.0" layoutY="189.0" prefHeight="30.0" prefWidth="45.0" promptText="Code" styleClass="text_green" stylesheets="@../../dashbard.css" text="+977" />
+                                                            <PasswordField fx:id="CPN_Pass" layoutX="85.0" layoutY="263.0" prefHeight="30.0" prefWidth="200.0" promptText="Password" />
+                                                            <ChoiceBox fx:id="CPN_ph" layoutX="85.0" layoutY="111.0" prefHeight="29.0" prefWidth="197.0" />
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane id="ChangePassword" fx:id="ChangePassword" layoutX="110.0" layoutY="70.0" prefHeight="450.0" prefWidth="370.0" style="-fx-background-color: #a7b5b4; -fx-background-radius: 10;" visible="false">
+                                                         <children>
+                                                            <Label alignment="CENTER" layoutX="85.0" layoutY="20.0" prefHeight="30.0" prefWidth="200.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Change Password" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ButtonBar layoutY="350.0" prefHeight="35.0" prefWidth="370.0">
+                                                               <buttons>
+                                                                  <Button mnemonicParsing="false" onAction="#cancelPane" styleClass="btn_fun" stylesheets="@../../design.css" text="Cancel" />
+                                                                  <Button fx:id="changePasswordFun" mnemonicParsing="false" onAction="#changePasswordFun" prefHeight="25.0" styleClass="btn_fun" stylesheets="@../../design.css" text="Change" />
+                                                               </buttons>
+                                                            </ButtonBar>
+                                                            <Label layoutX="85.0" layoutY="161.0" prefHeight="30.0" prefWidth="174.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Create New Password:" />
+                                                            <TextField fx:id="CP_OldPass_Text" layoutX="85.0" layoutY="119.0" prefHeight="30.0" prefWidth="200.0" promptText="Current Password" visible="false" />
+                                                            <PasswordField fx:id="CP_OldPass_Pass" layoutX="85.0" layoutY="119.0" prefHeight="30.0" prefWidth="200.0" promptText="Current Password" />
+                                                            <ImageView fx:id="CP_eye1" fitHeight="21.0" fitWidth="24.0" layoutX="259.0" layoutY="124.0" onMouseClicked="#eye1Fun" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../img/hide.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label layoutX="85.0" layoutY="89.0" prefHeight="30.0" prefWidth="174.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Current Password:" />
+                                                            <TextField fx:id="CP_NewPass_Text" layoutX="85.0" layoutY="191.0" prefHeight="30.0" prefWidth="200.0" promptText="New Password" visible="false" />
+                                                            <PasswordField fx:id="CP_NewPass_Pass" layoutX="85.0" layoutY="191.0" prefHeight="30.0" prefWidth="200.0" promptText="New Password" />
+                                                            <ImageView fx:id="CP_eye2" fitHeight="21.0" fitWidth="24.0" layoutX="259.0" layoutY="195.0" onMouseClicked="#eye2Fun" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../img/hide.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <TextField fx:id="CP_ConfirmPass_Text" layoutX="85.0" layoutY="225.0" prefHeight="30.0" prefWidth="200.0" promptText="Retype New Password" visible="false" />
+                                                            <PasswordField fx:id="CP_ConfirmPass_Pass" layoutX="85.0" layoutY="225.0" prefHeight="30.0" prefWidth="200.0" promptText="Retype New Password" />
+                                                            <ImageView fx:id="CP_eye3" fitHeight="21.0" fitWidth="24.0" layoutX="259.0" layoutY="229.0" onMouseClicked="#eye3Fun" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../img/hide.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label fx:id="CP_label_Invalid" alignment="TOP_CENTER" layoutX="85.0" layoutY="262.0" prefHeight="57.0" prefWidth="275.0" textFill="#ce3333" wrapText="true" />
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane id="ChangeEmail" fx:id="ChangeEmail" layoutX="110.0" layoutY="70.0" prefHeight="450.0" prefWidth="370.0" style="-fx-background-color: #a7b5b4; -fx-background-radius: 10;" visible="false">
+                                                         <children>
+                                                            <Label alignment="CENTER" layoutX="85.0" layoutY="20.0" prefHeight="30.0" prefWidth="200.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Change Email Address" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ButtonBar layoutY="350.0" prefHeight="35.0" prefWidth="370.0">
+                                                               <buttons>
+                                                                  <Button mnemonicParsing="false" onAction="#cancelPane" styleClass="btn_fun" stylesheets="@../../design.css" text="Cancel" />
+                                                                  <Button mnemonicParsing="false" onAction="#ChangeEmailFun" prefHeight="25.0" styleClass="btn_fun" stylesheets="@../../design.css" text="Change" />
+                                                               </buttons>
+                                                            </ButtonBar>
+                                                            <Label layoutX="85.0" layoutY="165.0" prefHeight="30.0" prefWidth="174.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Password:" />
+                                                            <TextField fx:id="CEA_email" layoutX="85.0" layoutY="126.0" prefHeight="30.0" prefWidth="200.0" promptText="example**@email.com" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                            <Label layoutX="85.0" layoutY="98.0" prefHeight="30.0" prefWidth="174.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Enter new phone number:" />
+                                                            <TextField fx:id="CEA_Password_Text" layoutX="85.0" layoutY="195.0" prefHeight="30.0" prefWidth="200.0" promptText="Password" styleClass="text_green" stylesheets="@../../dashbard.css" visible="false" />
+                                                            <PasswordField fx:id="CEA_Password" layoutX="85.0" layoutY="195.0" prefHeight="30.0" prefWidth="200.0" promptText="Password" />
+                                                            <ImageView fx:id="CEA_eye" fitHeight="21.0" fitWidth="24.0" layoutX="259.0" layoutY="199.0" onMouseClicked="#CEA_eye_fun" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../img/hide.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane id="AddRoom" fx:id="AddRoom" layoutX="110.0" layoutY="70.0" prefHeight="450.0" prefWidth="370.0" style="-fx-background-color: #a7b5b4; -fx-background-radius: 10;" visible="false">
+                                                         <children>
+                                                            <Label alignment="CENTER" layoutX="43.0" layoutY="20.0" prefHeight="30.0" prefWidth="284.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Add Room" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ButtonBar layoutX="-4.0" layoutY="385.0" prefHeight="35.0" prefWidth="370.0">
+                                                               <buttons>
+                                                                  <Button mnemonicParsing="false" onAction="#cancelPane" styleClass="btn_fun" stylesheets="@../../design.css" text="Cancel" />
+                                                                  <Button mnemonicParsing="false" onAction="#AddRoomFun" prefHeight="25.0" styleClass="btn_fun" stylesheets="@../../design.css" text="Add" />
+                                                               </buttons>
+                                                            </ButtonBar>
+                                                            <Label layoutX="84.0" layoutY="122.0" prefHeight="30.0" prefWidth="209.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="RoomID or RoomID starting from:" />
+                                                            <TextField disable="true" layoutX="84.0" layoutY="152.0" prefHeight="30.0" prefWidth="33.0" promptText="Initial" styleClass="text_green" stylesheets="@../../dashbard.css" text="R" />
+                                                            <TextField fx:id="AR_RoomID" layoutX="122.0" layoutY="152.0" onKeyReleased="#AR_RoomID_Valid" prefHeight="30.0" prefWidth="162.0" promptText="RoomID or RoomNo" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                            <Label fx:id="AR_label" layoutX="84.0" layoutY="182.0" prefHeight="17.0" prefWidth="238.0" />
+                                                            <TextField fx:id="AR_Occupancy" layoutX="81.0" layoutY="266.0" onKeyReleased="#AR_Occupancy_Valid" prefHeight="30.0" prefWidth="200.0" promptText="0" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                            <Label layoutX="77.0" layoutY="225.0" prefHeight="30.0" prefWidth="209.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Occupancy:" />
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane id="DeleteRoom" fx:id="DeleteRoom" layoutX="110.0" layoutY="70.0" prefHeight="450.0" prefWidth="370.0" style="-fx-background-color: #a7b5b4; -fx-background-radius: 10;" visible="false">
+                                                         <children>
+                                                            <Label alignment="CENTER" layoutX="43.0" layoutY="20.0" prefHeight="30.0" prefWidth="284.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Delete Room" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ButtonBar layoutY="350.0" prefHeight="35.0" prefWidth="370.0">
+                                                               <buttons>
+                                                                  <Button mnemonicParsing="false" onAction="#cancelPane" styleClass="btn_fun" stylesheets="@../../design.css" text="Cancel" />
+                                                                  <Button mnemonicParsing="false" onAction="#DeleteRoom_Fun" prefHeight="25.0" styleClass="btn_fun" stylesheets="@../../design.css" text="Delete" />
+                                                               </buttons>
+                                                            </ButtonBar>
+                                                            <Label layoutX="81.0" layoutY="84.0" prefHeight="30.0" prefWidth="209.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="RoomID" />
+                                                            <TextField fx:id="DR_RoomId" layoutX="119.0" layoutY="114.0" onKeyReleased="#DR_RoomID_check_deletable" prefHeight="30.0" prefWidth="162.0" promptText="RoomID or RoomNo" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                            <TextField disable="true" layoutX="81.0" layoutY="114.0" prefHeight="30.0" prefWidth="33.0" promptText="Initial" styleClass="text_green" stylesheets="@../../dashbard.css" text="R" />
+                                                            <Label layoutX="72.0" layoutY="162.0" prefHeight="30.0" prefWidth="209.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="No of Student in that room:" />
+                                                            <Label fx:id="DR_label_stdno" layoutX="72.0" layoutY="184.0" prefHeight="30.0" prefWidth="40.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="0" />
+                                                            <Label fx:id="DR_label_stdno1" layoutX="119.0" layoutY="184.0" prefHeight="30.0" prefWidth="95.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Student" />
+                                                            <Label fx:id="DR_label_found" layoutX="225.0" layoutY="144.0" prefHeight="30.0" prefWidth="95.0" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane id="UpdateOccupancy" fx:id="UpdateOccupancy" layoutX="110.0" layoutY="70.0" prefHeight="450.0" prefWidth="370.0" style="-fx-background-color: #a7b5b4; -fx-background-radius: 10;" visible="false">
+                                                         <children>
+                                                            <Label alignment="CENTER" layoutX="43.0" layoutY="20.0" prefHeight="30.0" prefWidth="284.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Update Occupancy" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ButtonBar layoutY="350.0" prefHeight="35.0" prefWidth="370.0">
+                                                               <buttons>
+                                                                  <Button mnemonicParsing="false" onAction="#cancelPane" styleClass="btn_fun" stylesheets="@../../design.css" text="Cancel" />
+                                                                  <Button mnemonicParsing="false" onAction="#UpdateOccupancyFun" prefHeight="25.0" styleClass="btn_fun" stylesheets="@../../design.css" text="Update" />
+                                                               </buttons>
+                                                            </ButtonBar>
+                                                            <Label layoutX="77.0" layoutY="155.0" prefHeight="30.0" prefWidth="174.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Update Occupency:" />
+                                                            <TextField fx:id="UO_Occ" layoutX="77.0" layoutY="185.0" prefHeight="30.0" prefWidth="200.0" promptText="occupency" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                            <Label layoutX="80.0" layoutY="83.0" prefHeight="30.0" prefWidth="209.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="RoomID:" />
+                                                            <TextField fx:id="UO_RoomID" layoutX="118.0" layoutY="113.0" onKeyTyped="#UO_Occ_setter" prefHeight="30.0" prefWidth="162.0" promptText="RoomID or RoomNo" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                            <TextField disable="true" layoutX="80.0" layoutY="113.0" prefHeight="30.0" prefWidth="33.0" promptText="Initial" styleClass="text_green" stylesheets="@../../dashbard.css" text="R" />
+                                                            <Label fx:id="UP_label" layoutX="215.0" layoutY="144.0" prefHeight="21.0" prefWidth="124.0" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                                         </children>
+                                                      </Pane>
+                                                   </children>
+                                                </Pane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </HBox>
+                                    <ScrollPane hbarPolicy="NEVER" layoutY="75.0" prefHeight="625.0" prefWidth="308.0" vbarPolicy="NEVER">
+                                       <content>
+                                          <Pane id="1" prefHeight="800.0" prefWidth="305.0" styleClass="bg_white" stylesheets="@../../dashbard.css">
+                                             <children>
+                                                <Button alignment="CENTER" layoutX="50.0" layoutY="60.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toCreateUser" prefHeight="30.0" prefWidth="200.0" styleClass="setting_btn" stylesheets="@../../dashbard.css" text="Create" />
+                                                <Button fx:id="btn_UpdateOccupency" alignment="CENTER" layoutX="44.0" layoutY="443.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toUpdateOccupancy" prefHeight="30.0" prefWidth="200.0" styleClass="setting_btn" stylesheets="@../../dashbard.css" text="Update Occupancy" />
+                                                <Button fx:id="btn_AddRoom" alignment="CENTER" layoutX="44.0" layoutY="363.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toAddRoom" prefHeight="30.0" prefWidth="200.0" styleClass="setting_btn" stylesheets="@../../dashbard.css" text="Add Room" />
+                                                <Button fx:id="btn_DeleteRoom" alignment="CENTER" layoutX="44.0" layoutY="403.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toDeleteRoom" prefHeight="30.0" prefWidth="200.0" styleClass="setting_btn" stylesheets="@../../dashbard.css" text="Delete Room" />
+                                                <Label layoutX="19.0" layoutY="328.0" prefHeight="30.0" prefWidth="263.0" text="Update Room Detail">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="25.0" layoutY="25.0" prefHeight="30.0" prefWidth="150.0" text="Update Users">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="21.0" layoutY="153.0" prefHeight="30.0" prefWidth="150.0" text="Personal">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button alignment="CENTER" layoutX="46.0" layoutY="233.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toChangePassword" prefHeight="30.0" prefWidth="200.0" styleClass="setting_btn" stylesheets="@../../dashbard.css" text="Change Password" />
+                                                <Button alignment="CENTER" layoutX="46.0" layoutY="193.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toChangePh" prefHeight="30.0" prefWidth="200.0" styleClass="setting_btn" stylesheets="@../../dashbard.css" text="Change Phone Number" />
+                                                <Button alignment="CENTER" layoutX="46.0" layoutY="273.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toChangeEmail" prefHeight="30.0" prefWidth="200.0" styleClass="setting_btn" stylesheets="@../../dashbard.css" text="Change Email" />
+                                                <Label layoutX="183.0" layoutY="30.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="( only Warden )" />
+                                                <Button alignment="CENTER" layoutX="50.0" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toDeleteUser" prefHeight="30.0" prefWidth="200.0" styleClass="setting_btn" stylesheets="@../../dashbard.css" text="Delete " />
+                                                <Label layoutX="169.0" layoutY="335.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="( only Warden )" />
+                                             </children>
+                                          </Pane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

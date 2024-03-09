@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="560.0" prefWidth="864.0" styleClass="bg_white" stylesheets="@../../dashbard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hms.hosteler.Room">
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="560.0" prefWidth="864.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="500.0" prefWidth="864.0" vbarPolicy="NEVER">
+               <content>
+                  <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="864.0" styleClass="bg_white" stylesheets="@../../dashbard.css">
+                     <children>
+                        <HBox id="heading" alignment="TOP_CENTER" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="864.0" styleClass="bg_modules_heading" stylesheets="@../../design.css">
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="74.0" prefWidth="209.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Allocate Room" textAlignment="CENTER" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox id="form" alignment="TOP_CENTER" layoutY="75.0" prefHeight="625.0" prefWidth="864.0" styleClass="bg_white" stylesheets="@../../dashbard.css">
+                           <children>
+                              <Pane fx:id="AllocateRoomAnchor" prefHeight="500.0" prefWidth="864.0">
+                                 <children>
+                                    <Button accessibleRole="BUTTON" layoutX="604.0" layoutY="313.0" mnemonicParsing="false" onAction="#AllocateRoomFun" prefHeight="36.0" prefWidth="119.0" styleClass="btn_fun" stylesheets="@../../design.css" text="Allocate" />
+                                    <Label layoutX="25.0" layoutY="113.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="RoomID:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="AR_yyyy" layoutX="200.0" layoutY="68.0" prefHeight="30.0" prefWidth="80.0" promptText="yyyy" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="AR_mm" layoutX="293.0" layoutY="68.0" prefHeight="30.0" prefWidth="67.0" promptText="mm" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="AR_dd" layoutX="371.0" layoutY="68.0" prefHeight="30.0" prefWidth="65.0" promptText="dd" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="AR_RoomID" layoutX="200.0" layoutY="108.0" onKeyReleased="#AR_RoomIDChecker" prefHeight="30.0" prefWidth="385.0" promptText="00101" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="AR_StudentID" layoutX="199.0" layoutY="148.0" onKeyReleased="#checkStudentID" prefHeight="30.0" prefWidth="386.0" promptText="000123" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="25.0" layoutY="68.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Date:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="520.0" opacity="0.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Join Date:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="442.0" layoutY="68.0" prefHeight="30.0" prefWidth="71.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="BS">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="153.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="StudentID:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER_RIGHT" layoutX="162.0" layoutY="148.0" prefHeight="30.0" prefWidth="35.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="S" textAlignment="RIGHT">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER_RIGHT" layoutX="162.0" layoutY="108.0" prefHeight="30.0" prefWidth="35.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="R" textAlignment="RIGHT">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="193.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Student Name:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Button accessibleRole="BUTTON" layoutX="513.0" layoutY="68.0" mnemonicParsing="false" onAction="#setDateBS" prefHeight="30.0" prefWidth="72.0" text="SetDate" />
+                                    <Label fx:id="AR_StudentName" layoutX="199.0" layoutY="193.0" prefHeight="30.0" prefWidth="386.0" style="-fx-background-color: white;" styleClass="text_green" stylesheets="@../../dashbard.css">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="AR_label1" layoutX="590.0" layoutY="113.0" prefHeight="24.0" prefWidth="133.0" />
+                                    <Label fx:id="AR_label2" layoutX="604.0" layoutY="156.0" prefHeight="24.0" prefWidth="133.0" />
+                                    <Button accessibleRole="BUTTON" layoutX="490.0" layoutY="313.0" mnemonicParsing="false" onAction="#DeAlloctae" prefHeight="36.0" prefWidth="119.0" styleClass="btn_fun" stylesheets="@../../design.css" text="Dealloctae" />
+                                    <Label layoutX="490.0" layoutY="342.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="By StudentID and RoomID">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

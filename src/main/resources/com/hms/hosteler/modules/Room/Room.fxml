@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorRoom" styleClass="bg_white" stylesheets="@../../dashbard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hms.hosteler.Room">
+   <children>
+      <HBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="560.0" styleClass="bg_white" stylesheets="@../../dashbard.css">
+               <children>
+                  <HBox alignment="TOP_CENTER" layoutY="10.0" prefHeight="70.0" prefWidth="864.0" styleClass="bg_modules_heading" stylesheets="@../../dashbard.css">
+                     <children>
+                        <Label alignment="CENTER" layoutY="10.0" prefHeight="65.0" prefWidth="864.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Room" textAlignment="CENTER" underline="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutY="87.0" prefHeight="261.0" prefWidth="864.0" spacing="60.0">
+                     <children>
+                        <Pane prefHeight="260.0" prefWidth="200.0" styleClass="dashboard_parts" stylesheets="@../../dashbard.css">
+                           <children>
+                              <Button layoutX="50.0" layoutY="86.0" mnemonicParsing="false" onAction="#AllocateRoom_onAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 5;" styleClass="bg_white" stylesheets="@../../dashbard.css" text="Fill Form" textAlignment="CENTER" />
+                              <Label alignment="CENTER" layoutY="20.0" prefHeight="65.0" prefWidth="200.0" text="Allocate Room">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="260.0" prefWidth="200.0" styleClass="dashboard_parts" stylesheets="@../../dashbard.css">
+                           <children>
+                              <Button layoutX="50.0" layoutY="86.0" mnemonicParsing="false" onAction="#RoomDetail_onAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 5;" styleClass="bg_white" stylesheets="@../../dashbard.css" text="View Detail" textAlignment="CENTER" />
+                              <Label alignment="CENTER" layoutY="20.0" prefHeight="65.0" prefWidth="200.0" text="Room Detail">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="260.0" prefWidth="200.0" styleClass="dashboard_parts" stylesheets="@../../dashbard.css">
+                           <children>
+                              <Button layoutX="50.0" layoutY="86.0" mnemonicParsing="false" onAction="#AllRoomsDetail_onAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 5;" styleClass="bg_white" stylesheets="@../../dashbard.css" text="View Detail" textAlignment="CENTER" />
+                              <Label alignment="CENTER" layoutY="20.0" prefHeight="65.0" prefWidth="200.0" text="All Rooms Detail">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" top="70.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorSETUP" prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: #edc6a1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hms.hosteler.LoginController">
+    <children>
+      <Pane>
+         <children>
+              <Pane fx:id="setup1" prefHeight="450.0" prefWidth="650.0" style="-fx-border-radius: 10;">
+                  <children>
+                      <ImageView fitHeight="102.0" fitWidth="116.0" layoutX="249.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@img/z1_SecondIcon.png" />
+                          </image>
+                      </ImageView>
+                      <Label alignment="CENTER" layoutX="46.0" layoutY="14.0" prefHeight="17.0" prefWidth="508.0" styleClass="text_green" stylesheets="@dashbard.css" text="Welcome To Hosteler" underline="true">
+                          <font>
+                              <Font name="Segoe UI Black" size="24.0" />
+                          </font>
+                      </Label>
+                      <Label alignment="TOP_CENTER" layoutY="160.0" prefHeight="24.0" prefWidth="182.0" styleClass="text_green" stylesheets="@dashbard.css" text="Introducing HOSTELER" textAlignment="CENTER" underline="true" wrapText="true">
+                          <font>
+                              <Font name="System Bold" size="15.0" />
+                          </font>
+                      </Label>
+                      <Label alignment="TOP_CENTER" layoutX="46.0" layoutY="181.0" prefHeight="120.0" prefWidth="508.0" styleClass="text_green" stylesheets="@dashbard.css" text="A streamlined hostel management system, designed and developed by students at NAST College, Dhangadhi. Hosteler aims to significantly reduce administrative burdens within hostels, enabling greater efficiency and improved resource allocation.&#10;Students Name :-" textAlignment="JUSTIFY" wrapText="true">
+                          <font>
+                              <Font name="System Bold" size="14.0" />
+                          </font>
+                      </Label>
+                      <Label alignment="TOP_CENTER" layoutX="136.0" layoutY="262.0" prefHeight="91.0" prefWidth="252.0" styleClass="text_green" stylesheets="@dashbard.css" text="1. Salina Biswokarma&#10;2. Rohit Chaudhary&#10;3. Ram Thapa&#10;4. Raman Chaudhary." wrapText="true">
+                          <font>
+                              <Font name="System Bold" size="14.0" />
+                          </font>
+                      </Label>
+                      <Button layoutX="395.0" layoutY="348.0" mnemonicParsing="false" onAction="#toPage2" prefHeight="25.0" prefWidth="76.0" styleClass="text_green" stylesheets="@design.css" text="Next">
+                          <font>
+                              <Font name="System Bold" size="12.0" />
+                          </font>
+                      </Button>
+                      <Button layoutX="497.0" layoutY="348.0" mnemonicParsing="false" onAction="#CLOSE" prefHeight="25.0" prefWidth="76.0" styleClass="text_green" stylesheets="@design.css" text="Exit">
+                          <font>
+                              <Font name="System Bold" size="12.0" />
+                          </font>
+                      </Button>
+                      <Label alignment="TOP_CENTER" layoutX="164.0" layoutY="160.0" prefHeight="24.0" prefWidth="30.0" styleClass="text_green" stylesheets="@dashbard.css" text=":-" textAlignment="CENTER" wrapText="true">
+                          <font>
+                              <Font name="System Bold" size="15.0" />
+                          </font>
+                      </Label>
+                  </children>
+              </Pane>
+              <Pane fx:id="setup2" prefHeight="450.0" prefWidth="650.0" style="-fx-border-radius: 10;" visible="false">
+                  <children>
+                      <Label alignment="CENTER" layoutX="71.0" layoutY="14.0" prefHeight="28.0" prefWidth="156.0" styleClass="text_green" stylesheets="@dashbard.css" text="Setup Ste" underline="true">
+                          <font>
+                              <Font name="Segoe UI Black" size="19.0" />
+                          </font>
+                      </Label>
+                      <Button layoutX="395.0" layoutY="348.0" mnemonicParsing="false" onAction="#toPage1" prefHeight="25.0" prefWidth="76.0" styleClass="text_green" stylesheets="@design.css" text="Previous">
+                          <font>
+                              <Font name="System Bold" size="12.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="btn_Next_setup2" layoutX="497.0" layoutY="348.0" mnemonicParsing="false" onAction="#toAddEmp" prefHeight="25.0" prefWidth="76.0" styleClass="text_green" stylesheets="@design.css" text="Next">
+                          <font>
+                              <Font name="System Bold" size="12.0" />
+                          </font>
+                      </Button>
+                      <Label alignment="TOP_LEFT" layoutX="45.0" layoutY="58.0" prefHeight="138.0" prefWidth="498.0" styleClass="text_green" stylesheets="@dashbard.css" text="The Warden role was meticulously implemented within the system with the singular purpose of granting comprehensive access for essential tasks. By creating a Warden position, we empower an individual with the tools and knowledge necessary to navigate the system in its entirety. To activate this crucial role, kindly complete the Add Employee form and initiate the system." textAlignment="JUSTIFY" wrapText="true">
+                          <font>
+                              <Font size="13.0" />
+                          </font>
+                      </Label>
+                      <Label alignment="TOP_LEFT" layoutX="59.0" layoutY="162.0" prefHeight="35.0" prefWidth="156.0" styleClass="text_green" stylesheets="@dashbard.css" text="Post : Warden" textAlignment="JUSTIFY" wrapText="true">
+                          <font>
+                              <Font name="System Bold" size="15.0" />
+                          </font>
+                      </Label>
+                      <ImageView fitHeight="41.0" fitWidth="44.0" layoutX="18.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@img/z2_MainIcon.png" />
+                          </image>
+                      </ImageView>
+                      <ImageView fitHeight="163.0" fitWidth="312.0" layoutX="215.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@img/showins1.png" />
+                          </image>
+                      </ImageView>
+                  </children>
+              </Pane>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

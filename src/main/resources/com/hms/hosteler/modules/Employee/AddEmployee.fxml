@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorAddEmp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="bg_white" stylesheets="@../../dashbard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hms.hosteler.Employee">
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="560.0" prefWidth="865.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" minWidth="-Infinity" prefWidth="864.0" vbarPolicy="NEVER">
+               <content>
+                  <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="864.0" styleClass="bg_white" stylesheets="@../../dashbard.css">
+                     <children>
+                        <HBox id="heading" alignment="TOP_CENTER" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="864.0" styleClass="bg_modules_heading" stylesheets="@../../design.css">
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="74.0" prefWidth="209.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Add Employee" textAlignment="CENTER" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox id="form" alignment="TOP_CENTER" layoutY="75.0" prefHeight="625.0" prefWidth="864.0" styleClass="bg_white" stylesheets="@../../dashbard.css">
+                           <children>
+                              <Pane prefHeight="657.0" prefWidth="864.0">
+                                 <children>
+                                    <Label layoutX="25.0" layoutY="40.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Name:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="E_FName" layoutX="200.0" layoutY="40.0" prefHeight="30.0" prefWidth="200.0" promptText="First Name" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_LName" layoutX="415.0" layoutY="40.0" prefHeight="30.0" prefWidth="200.0" promptText="Last Name" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="25.0" layoutY="80.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Hosteler ID / Post :">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="E_HostelerID" layoutX="200.0" layoutY="79.0" prefHeight="30.0" prefWidth="200.0" promptText="ID" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_Post" layoutX="415.0" layoutY="79.0" prefHeight="30.0" prefWidth="200.0" promptText="Post" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="25.0" layoutY="120.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Date of Birth:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="E_DOB_yyyy" layoutX="200.0" layoutY="120.0" prefHeight="30.0" prefWidth="80.0" promptText="yyyy" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_DOB_mm" layoutX="300.0" layoutY="120.0" prefHeight="30.0" prefWidth="80.0" promptText="mm" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_DOB_dd" layoutX="400.0" layoutY="120.0" prefHeight="30.0" prefWidth="80.0" promptText="dd" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="503.0" layoutY="120.0" prefHeight="30.0" prefWidth="71.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="BS">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="160.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Sex:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <RadioButton fx:id="E_Sex_Female" layoutX="200.0" layoutY="160.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="88.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Female">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="gender" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="E_Sex_male" layoutX="312.0" layoutY="160.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Male" toggleGroup="$gender">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="E_Sex_Other" layoutX="415.0" layoutY="160.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="88.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Other" toggleGroup="$gender">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <Label layoutX="25.0" layoutY="200.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Phone No.:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="200.0" layoutY="200.0" prefHeight="30.0" prefWidth="51.0" style="-fx-border-color: #b4c1c2;" text="+977" />
+                                    <TextField fx:id="E_Phone" layoutX="253.0" layoutY="200.0" prefHeight="30.0" prefWidth="145.0" promptText="Number" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="415.0" layoutY="200.0" prefHeight="30.0" prefWidth="51.0" style="-fx-border-color: #b4c1c2;" text="+977" />
+                                    <TextField fx:id="E_Phone_Optional" layoutX="467.0" layoutY="200.0" prefHeight="30.0" prefWidth="145.0" promptText="Number ( Optional )" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="25.0" layoutY="240.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Email:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="E_Email" layoutX="200.0" layoutY="240.0" prefHeight="30.0" prefWidth="413.0" promptText="xxxxxxxxxx@email.com" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="25.0" layoutY="280.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Country:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="E_Country" layoutX="200.0" layoutY="280.0" prefHeight="30.0" prefWidth="414.0" promptText="United State of America or USA" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="25.0" layoutY="320.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Citizenship No.:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="E_Citizenship" layoutX="200.0" layoutY="320.0" prefHeight="30.0" prefWidth="200.0" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="25.0" layoutY="360.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Permanent Address:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="E_PAddress_State" layoutX="200.0" layoutY="360.0" prefHeight="30.0" prefWidth="200.0" promptText="Province / State" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_PAddress_District" layoutX="415.0" layoutY="360.0" prefHeight="30.0" prefWidth="200.0" promptText="District" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_PAddress_munici" layoutX="200.0" layoutY="400.0" prefHeight="30.0" prefWidth="200.0" promptText="Municipalty" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_PAddress_ward" layoutX="415.0" layoutY="400.0" prefHeight="30.0" prefWidth="72.0" promptText="Ward No." styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_PAddress_tole_optional" layoutX="503.0" layoutY="400.0" prefHeight="30.0" prefWidth="114.0" promptText="Tole" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="25.0" layoutY="440.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Temporary Address:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="E_TAddress_State" layoutX="200.0" layoutY="440.0" prefHeight="30.0" prefWidth="200.0" promptText="Province / State" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_TAddress_District" layoutX="415.0" layoutY="440.0" prefHeight="30.0" prefWidth="200.0" promptText="District" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_TAddress_Munici" layoutX="200.0" layoutY="480.0" prefHeight="30.0" prefWidth="200.0" promptText="Municipalty" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_TAddress_Ward" layoutX="415.0" layoutY="480.0" prefHeight="30.0" prefWidth="72.0" promptText="Ward No." styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_TAddress_Tole_optional" layoutX="503.0" layoutY="480.0" prefHeight="30.0" prefWidth="114.0" promptText="Tole" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <CheckBox fx:id="E_Same_as_PAddress" layoutX="627.0" layoutY="486.0" mnemonicParsing="false" onAction="#PerToTempAdd" prefHeight="19.0" prefWidth="203.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Same as Permanent Address">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <Label layoutX="25.0" layoutY="520.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Join Date:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="E_Join_yyyy" layoutX="200.0" layoutY="520.0" prefHeight="30.0" prefWidth="80.0" promptText="yyyy" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_Join_mm" layoutX="300.0" layoutY="520.0" prefHeight="30.0" prefWidth="80.0" promptText="mm" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <TextField fx:id="E_Join_dd" layoutX="400.0" layoutY="520.0" prefHeight="30.0" prefWidth="80.0" promptText="dd" styleClass="text_green" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="503.0" layoutY="520.0" prefHeight="30.0" prefWidth="71.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="BS">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="534.0" layoutY="523.0" mnemonicParsing="false" onAction="#setDate" prefHeight="25.0" prefWidth="77.0" text="GetDate" />
+                                    <Button layoutX="322.0" layoutY="567.0" mnemonicParsing="false" onAction="#clearAddEmp" styleClass="btn_fun" stylesheets="@../../design.css" text="Clear" />
+                                    <Button fx:id="btn_submit" layoutX="646.0" layoutY="567.0" mnemonicParsing="false" onAction="#saveButton" styleClass="btn_fun" stylesheets="@../../design.css" text="Submit" />
+                                    <Label layoutX="15.0" layoutY="45.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="85.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="125.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="165.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="205.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="245.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="285.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="325.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="195.0" layoutY="195.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="365.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="195.0" layoutY="355.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="195.0" layoutY="395.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="410.0" layoutY="355.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="410.0" layoutY="395.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="195.0" layoutY="435.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="195.0" layoutY="475.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="410.0" layoutY="435.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="410.0" layoutY="475.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="445.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="525.0" text="*" textFill="#d93232">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="538.0" layoutY="567.0" mnemonicParsing="false" onAction="#UpdateInfo" styleClass="btn_fun" stylesheets="@../../design.css" text="Update" />
+                                    <Button layoutX="431.0" layoutY="567.0" mnemonicParsing="false" onAction="#SearchBy" prefHeight="29.0" prefWidth="171.0" styleClass="btn_fun" stylesheets="@../../design.css" text="Search" />
+                                    <Label layoutX="441.0" layoutY="595.0" prefHeight="30.0" prefWidth="170.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="By HostelerID">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="184.0" layoutY="80.0" prefHeight="30.0" prefWidth="17.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="H">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

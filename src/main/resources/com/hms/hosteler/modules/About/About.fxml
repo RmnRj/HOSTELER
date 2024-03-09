@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane styleClass="bg_white" stylesheets="@../../dashbard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hms.hosteler.DashboardController">
+   <children>
+      <HBox alignment="TOP_CENTER" prefWidth="865.0">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" pannable="true" vbarPolicy="NEVER">
+               <content>
+                  <Pane style="-fx-border-radius: 10; -fx-border-color: gray;" styleClass="bg_white" stylesheets="@../../dashbard.css">
+                     <children>
+                        <VBox layoutX="-3.0" layoutY="1.0">
+                           <children>
+                              <Pane id="1" prefHeight="243.0" prefWidth="620.0">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="181.0" layoutY="11.0" prefHeight="218.0" prefWidth="259.0" style="-fx-border-color: #0A471D; -fx-border-radius: 10;">
+                                       <children>
+                                          <ImageView fitHeight="123.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../img/z1_SecondIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="214.0" text="HOSTELER">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="214.0" text="&quot;A hostel management system&quot;">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Pane>
+                              <Pane id="2" prefHeight="71.0" prefWidth="640.0">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="128.0" layoutY="7.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="19.0" prefWidth="364.0" text="Design and develop in Nepal, 2024&#10;">
+                                             <font>
+                                                <Font name="System Bold Italic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="37.0" prefWidth="364.0" text="From the students of NAST, Dhangadhi&#10;This software is developed in our group project purpose." textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font name="System Bold Italic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </Pane>
+                              <Pane id="3" prefWidth="640.0">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="197.0" layoutY="29.0" spacing="2.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="25.0" prefWidth="214.0" text="Ram Thapa">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="25.0" prefWidth="214.0" text="Raman Chaudhary">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="25.0" prefWidth="214.0" text="Rohit Chaudhary">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="25.0" prefWidth="214.0" text="Salina Biswokarma">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </VBox>
+                                    <Label alignment="CENTER" layoutX="202.0" layoutY="7.0" prefHeight="17.0" prefWidth="214.0" text="Developers">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane id="4" prefHeight="60.0" prefWidth="640.0">
+                                 <children>
+                                    <HBox alignment="CENTER" layoutX="120.0" layoutY="-1.0" prefHeight="30.0" prefWidth="400.0" style="-fx-border-color: #0A471D; -fx-border-radius: 5;">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="123.0" text="Contact Us:" textAlignment="RIGHT">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="20.0" prefWidth="245.0" text="srrr4286@email.com" textAlignment="RIGHT">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

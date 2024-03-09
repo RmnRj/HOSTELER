@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="bg_white" stylesheets="@../../dashbard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hms.hosteler.RoomDetails">
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" spacing="5.0">
+               <children>
+                  <HBox id="heading" alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="864.0" styleClass="bg_modules_heading" stylesheets="@../../dashbard.css">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="65.0" prefWidth="209.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Room Details" textAlignment="CENTER" underline="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox id="Search" alignment="CENTER" prefHeight="50.0" prefWidth="864.0">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="819.0">
+                           <children>
+                              <Pane layoutX="140.0" layoutY="11.0" style="-fx-background-color: white;" stylesheets="@../../dashbard.css">
+                                 <children>
+                                    <TextField fx:id="RD_search" layoutX="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="530.0" promptText="RoomID" styleClass="SearchBox" stylesheets="@../../dashbard.css" />
+                                    <Label layoutX="2.0" prefHeight="30.0" prefWidth="22.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="R" />
+                                 </children>
+                              </Pane>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="643.0" layoutY="15.0" onMouseClicked="#searchFun" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/search.png" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="50.0" layoutY="10.0" mnemonicParsing="false" onAction="#searchFun" prefHeight="30.0" prefWidth="75.0" style="-fx-background-radius: 5;" text="Search">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../dashbard.css" />
+                                    <URL value="@../../design.css" />
+                                 </stylesheets>
+                                 <styleClass>
+                                    <String fx:value="text_green" />
+                                    <String fx:value="SearchBtn" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="403.0" prefWidth="975.0">
+                     <children>
+                        <Pane prefHeight="438.0" prefWidth="800.0">
+                           <children>
+                              <Label layoutX="26.0" layoutY="18.0" prefHeight="30.0" prefWidth="86.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="Room:" />
+                              <Label fx:id="RD_roomID" layoutX="69.0" layoutY="33.0" prefHeight="30.0" prefWidth="86.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="R0000" />
+                              <Label layoutX="27.0" layoutY="56.0" prefHeight="30.0" prefWidth="86.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="No of Student:" />
+                              <Label fx:id="RD_NoOfStudent" layoutX="69.0" layoutY="74.0" prefHeight="30.0" prefWidth="86.0" styleClass="text_green" stylesheets="@../../dashbard.css" text="0" />
+                              <Label fx:id="RD_label" alignment="TOP_LEFT" layoutX="3.0" layoutY="123.0" prefHeight="85.0" prefWidth="209.0" styleClass="text_green" stylesheets="@../../dashbard.css" textAlignment="JUSTIFY" wrapText="true" />
+                              <ScrollPane hbarPolicy="NEVER" layoutX="212.0" layoutY="33.0" prefHeight="350.0" prefWidth="433.0">
+                                 <content>
+                                    <TableView fx:id="RD_Table" fixedCellSize="0.0" prefHeight="353.0" prefWidth="421.0">
+                                      <columns>
+                                        <TableColumn fx:id="RD_studentID" prefWidth="138.0" text="StudentID" />
+                                        <TableColumn fx:id="RD_students" prefWidth="277.9999694824219" text="Student Name" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
