@@ -39,18 +39,18 @@ public class save {
 //        System.out.println(userPost);
     }
 
-    String hostelerInfoPath = "D:/CODE/Project/HOSTELER/src/main/java/com/hms/hosteler/hostel_info.properties";
+    String hostelerInfoPath = "HOSTELER/src/main/java/com/hms/hosteler/hostel_info.properties";
 
-    String BillNo = "D:/CODE/Project/HOSTELER/src/main/java/com/hms/hosteler/Login_billNo.properties";
+    String BillNo = "HOSTELER/src/main/java/com/hms/hosteler/Login_billNo.properties";
 
     public String getLoginBillNo() {
         return BillNo;
     }
 
-    private final String dbms_url = "jdbc:mysql://127.0.0.1:3306/db_hosteler";
+    private final String dbms_url = "jdbc:mysql://**your_dbms_url";
 
-    private final String dbms_user = "root";
-    private final String dbms_password = "Salina#12";
+    private final String dbms_user = "_user";
+    private final String dbms_password = "_password";
 
     public String getDbms_url() {
         return dbms_url;
