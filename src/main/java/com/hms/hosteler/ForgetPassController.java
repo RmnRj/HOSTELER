@@ -165,8 +165,7 @@ public class ForgetPassController {
         String name = getName();
 
         String from = "srrr4286@gmail.com";
-        String pass = "wvjtvocaploibirn";
-        //"wvjtvocaploibirn" SMTP password
+        String pass = "";
 
         String messageBody = "Hi " + name +" ("+userid+"),\n" +
                 "\n" +
